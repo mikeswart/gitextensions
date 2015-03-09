@@ -1,0 +1,19 @@
+﻿<Window x:Class="GitSlave.Internal.GitSlaveMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gitSlave="clr-namespace:GitSlave"
+        Title="GitSlaveMainWindow" Height="300" Width="300"
+        x:ClassModifier="internal">
+    <Window.DataContext>
+        <Binding Path="Main" Source="{StaticResource ViewModelLocator}" />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="ButtonStackPanel" Margin="40,34.672,40,10.5" Grid.Row="1"/>
+        <Button x:Name="PullAllButton" Command="{Binding PullAllCommand}" Content="Button" Margin="15"/>
+
+    </Grid>
+</Window>
